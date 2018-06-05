@@ -1,0 +1,48 @@
+
+===> get_reference_facial_points():
+---> Params:
+            output_size:  (112, 112)
+            inner_padding_factor:  0
+            outer_padding: (0, 0)
+            default_square:  True
+---> default:
+              crop_size =  [112 112]
+              reference_5pts =  [[ 38.29459953  51.69630051]
+ [ 73.53179932  51.50139999]
+ [ 56.02519989  71.73660278]
+ [ 41.54930115  92.3655014 ]
+ [ 70.72990036  92.20410156]]
+output_size == DEFAULT_CROP_SIZE [112 112]: return default reference points
+all 16 images
+image.shape: (155, 106, 3)
+save_img_fn: ../../data/aligned_imgs/05719/09071.jpg
+image.shape: (378, 260, 3)
+save_img_fn: ../../data/aligned_imgs/05382/09968.jpg
+image.shape: (139, 111, 3)
+save_img_fn: ../../data/aligned_imgs/01138/image-01138_0.jpg
+image.shape: (210, 150, 3)
+save_img_fn: ../../data/aligned_imgs/02382/09809.jpg
+image.shape: (378, 260, 3)
+save_img_fn: ../../data/aligned_imgs/01338/07358.jpg
+image.shape: (59, 45, 3)
+save_img_fn: ../../data/aligned_imgs/05382/image-05382_0.jpg
+image.shape: (101, 61, 3)
+save_img_fn: ../../data/aligned_imgs/04664/image-04664_0.jpg
+image.shape: (567, 390, 3)
+save_img_fn: ../../data/aligned_imgs/09345/09529.jpg
+image.shape: (872, 600, 3)
+save_img_fn: ../../data/aligned_imgs/01404/09765.jpg
+image.shape: (79, 55, 3)
+save_img_fn: ../../data/aligned_imgs/01404/image-01404_0.jpg
+image.shape: (378, 260, 3)
+save_img_fn: ../../data/aligned_imgs/03502/08442.jpg
+image.shape: (75, 49, 3)
+save_img_fn: ../../data/aligned_imgs/09345/image-09345_0.jpg
+image.shape: (153, 119, 3)
+save_img_fn: ../../data/aligned_imgs/02382/image-02382_0.jpg
+image.shape: (47, 37, 3)
+save_img_fn: ../../data/aligned_imgs/05719/image-05719_0.jpg
+image.shape: (105, 77, 3)
+save_img_fn: ../../data/aligned_imgs/01338/image-01338_0.jpg
+image.shape: (107, 69, 3)
+save_img_fn: ../../data/aligned_imgs/03502/image-03502_1.jpg
