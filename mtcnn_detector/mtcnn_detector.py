@@ -684,7 +684,7 @@ def detect_face(detector, cv_img, minsize=20,
     return total_boxes.tolist(), points.tolist()
 
 
-def get_detector(caffe_model_path, gpu_id=0):
+def get_detector(caffe_model_path, gpu_id=1):
     if gpu_id >= 0:
         caffe.set_mode_gpu()
         caffe.set_device(gpu_id)

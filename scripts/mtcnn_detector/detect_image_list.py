@@ -47,7 +47,8 @@ def main(img_list_fn,
     result_list = []
 
     t1 = time.clock()
-    detector = MtcnnDetector(caffe_model_path)
+    gpu_id = 6
+    detector = MtcnnDetector(caffe_model_path, gpu_id)
     t2 = time.clock()
     print("initFaceDetector() costs %f seconds" % (t2 - t1))
 
@@ -89,7 +90,28 @@ def main(img_list_fn,
 
         img_cnt += 1
         t1 = time.clock()
+        img_h = img.shape[0]
+        img_w = img.shape[1]
 
+        max_line = 0
+        resize_scale = 0
+        new_img_h = 0
+        new_img_w = 0
+        if img_h >= img_w:
+            max_line = img_h
+            if max_line > 500:
+                resize_scale = max_line / 500
+                new_img_h = 500
+                new_img_w = img_w / resize_scale
+                
+        if img_w > img_h:
+            max_line = img_w
+            if max_line > 500:
+                resize_scale = max_line / 500
+                new_img_w = 500
+                new_img_h = img_h / resize_scale
+            
+        img = cv2.resize(img, (new_img_w, new_img_h))
         bboxes, points = detector.detect_face(img, minsize,
                                               threshold, scale_factor)
 
@@ -133,6 +155,7 @@ def main(img_list_fn,
             draw_faces(img, bboxes, points)
 
         if save_img:
+            
             save_name = osp.join(save_dir, osp.basename(img_path))
             cv2.imwrite(save_name, img)
 
@@ -159,9 +182,9 @@ if __name__ == "__main__":
     # img_list_fn = "../../test_imgs/list_img_det.txt"
     # img_root_dir = "../../test_imgs/"
     # save_dir = './fd_rlt4'
-    img_list_fn = "../../data/accept/img.lst"
-    img_root_dir = "../../data/accept"
-    save_dir = '../../data/bh_rlt4'
+    #img_list_fn = "../../data/accept/img.lst"
+    #img_root_dir = "../../data/accept"
+    #save_dir = '../../data/bh_rlt4'
 
     print(sys.argv)
 
@@ -169,10 +192,10 @@ if __name__ == "__main__":
         img_list_fn = sys.argv[1]
 
     if len(sys.argv) > 2:
-        save_dir = sys.argv[2]
+        img_root_dir = sys.argv[2]
 
     if len(sys.argv) > 3:
-        img_root_dir = sys.argv[3]
+        save_dir = sys.argv[3]
 
     if len(sys.argv) > 4:
         show_img = not(not(sys.argv[4]))
