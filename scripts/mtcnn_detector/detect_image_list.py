@@ -30,7 +30,7 @@ def main(img_list_fn,
          save_dir,
          save_img=True,
          show_img=False):
-
+    MAX_LINE= 500
     minsize = 20
     caffe_model_path = "../../model"
     threshold = [0.6, 0.7, 0.7]
@@ -42,12 +42,12 @@ def main(img_list_fn,
     fp = open(img_list_fn, 'r')
 
 #    if not SAVE_INTO_SEPERATE_JSON:
-    fp_rlt = open(osp.join(save_dir, 'mtcnn_fd_rlt.json'), 'w')
+    #fp_rlt = open(osp.join(save_dir, 'mtcnn_fd_rlt.json'), 'w')
 
     result_list = []
 
     t1 = time.clock()
-    gpu_id = 6
+    gpu_id = 7
     detector = MtcnnDetector(caffe_model_path, gpu_id)
     t2 = time.clock()
     print("initFaceDetector() costs %f seconds" % (t2 - t1))
@@ -95,20 +95,20 @@ def main(img_list_fn,
 
         max_line = 0
         resize_scale = 0
-        new_img_h = 0
-        new_img_w = 0
+        new_img_h = img_h
+        new_img_w = img_w
         if img_h >= img_w:
             max_line = img_h
-            if max_line > 500:
-                resize_scale = max_line / 500
-                new_img_h = 500
+            if max_line > MAX_LINE:
+                resize_scale = max_line / MAX_LINE
+                new_img_h = MAX_LINE
                 new_img_w = img_w / resize_scale
                 
         if img_w > img_h:
             max_line = img_w
-            if max_line > 500:
-                resize_scale = max_line / 500
-                new_img_w = 500
+            if max_line > MAX_LINE:
+                resize_scale = max_line / MAX_LINE
+                new_img_w = MAX_LINE
                 new_img_h = img_h / resize_scale
             
         img = cv2.resize(img, (new_img_w, new_img_h))
@@ -123,12 +123,13 @@ def main(img_list_fn,
             for (box, pts) in zip(bboxes, points):
                 #                box = box.tolist()
                 #                pts = pts.tolist()
+                
                 tmp = {'rect': box[0:4],
                        'score': box[4],
                        'pts': pts
                        }
                 rlt['faces'].append(tmp)
-
+            
             rlt['face_count'] = len(bboxes)
 
         rlt['message'] = 'success'
@@ -167,7 +168,7 @@ def main(img_list_fn,
                 break
 
 #    if not SAVE_INTO_SEPERATE_JSON:
-    json.dump(result_list, fp_rlt, indent=2)
+    #json.dump(result_list, fp_rlt, indent=2)
     fp_rlt.close()
 
     fp.close()

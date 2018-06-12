@@ -13,36 +13,50 @@
  [ 41.54930115  92.3655014 ]
  [ 70.72990036  92.20410156]]
 output_size == DEFAULT_CROP_SIZE [112 112]: return default reference points
-all 16 images
-image.shape: (155, 106, 3)
-save_img_fn: ../../data/aligned_imgs/05719/09071.jpg
-image.shape: (378, 260, 3)
-save_img_fn: ../../data/aligned_imgs/05382/09968.jpg
-image.shape: (139, 111, 3)
-save_img_fn: ../../data/aligned_imgs/01138/image-01138_0.jpg
-image.shape: (210, 150, 3)
-save_img_fn: ../../data/aligned_imgs/02382/09809.jpg
-image.shape: (378, 260, 3)
-save_img_fn: ../../data/aligned_imgs/01338/07358.jpg
-image.shape: (59, 45, 3)
-save_img_fn: ../../data/aligned_imgs/05382/image-05382_0.jpg
-image.shape: (101, 61, 3)
-save_img_fn: ../../data/aligned_imgs/04664/image-04664_0.jpg
-image.shape: (567, 390, 3)
-save_img_fn: ../../data/aligned_imgs/09345/09529.jpg
-image.shape: (872, 600, 3)
-save_img_fn: ../../data/aligned_imgs/01404/09765.jpg
-image.shape: (79, 55, 3)
-save_img_fn: ../../data/aligned_imgs/01404/image-01404_0.jpg
-image.shape: (378, 260, 3)
-save_img_fn: ../../data/aligned_imgs/03502/08442.jpg
-image.shape: (75, 49, 3)
-save_img_fn: ../../data/aligned_imgs/09345/image-09345_0.jpg
-image.shape: (153, 119, 3)
-save_img_fn: ../../data/aligned_imgs/02382/image-02382_0.jpg
-image.shape: (47, 37, 3)
-save_img_fn: ../../data/aligned_imgs/05719/image-05719_0.jpg
-image.shape: (105, 77, 3)
-save_img_fn: ../../data/aligned_imgs/01338/image-01338_0.jpg
-image.shape: (107, 69, 3)
-save_img_fn: ../../data/aligned_imgs/03502/image-03502_1.jpg
+all 23 images
+image.shape: (3128, 3128, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164694802_0.jpg
+image.shape: (4100, 3966, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4163799235_0.jpg
+image.shape: (552, 555, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@6328511367_0.jpg
+image.shape: (2408, 1861, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@331954943_0.jpg
+image.shape: (4093, 4760, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4163865271_0.jpg
+image.shape: (480, 503, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@427047560_0.jpg
+image.shape: (6144, 4113, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164611166_0.jpg
+image.shape: (4915, 4016, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4163998259_0.jpg
+image.shape: (1806, 2199, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@399471684_0.jpg
+image.shape: (460, 462, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@6329264482_0.jpg
+image.shape: (5614, 4113, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164838736_0.jpg
+image.shape: (3165, 3162, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4163887285_0.jpg
+image.shape: (5614, 4113, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4163831335_0.jpg
+image.shape: (5348, 4113, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4163983887_0.jpg
+image.shape: (4930, 4113, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164573756_0.jpg
+image.shape: (480, 640, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@354625162_0.jpg
+image.shape: (5878, 4113, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164013031_0.jpg
+image.shape: (3428, 3425, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164712730_0.jpg
+image.shape: (1912, 1902, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@4164785308_0.jpg
+image.shape: (1390, 1384, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@331956641_0.jpg
+image.shape: (462, 419, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@360315687_0.jpg
+image.shape: (278, 275, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/98908999/98908999@N00_identity_0@71539816_11.jpg
+image.shape: (364, 388, 3)
+save_img_fn: /workspace/data/qyc/data/MeGlass_ori_align/aligned_imgs/7161407/7161407@N02_identity_2@6329265532_0.jpg
